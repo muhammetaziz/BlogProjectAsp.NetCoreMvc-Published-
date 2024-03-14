@@ -1,0 +1,15 @@
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\bin\Debug\DataAccessLayer.dll
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\bin\Debug\EntityLayer.dll
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\bin\Debug\EntityFramework.dll
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\bin\Debug\EntityLayer.pdb
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\bin\Debug\EntityLayer.dll.config
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\bin\Debug\EntityFramework.xml
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
