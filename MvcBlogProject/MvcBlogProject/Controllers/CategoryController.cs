@@ -15,9 +15,11 @@ namespace MvcBlogProject.Controllers
         public ActionResult Index()
         {
             var categoryvalues = cm.GetAll();
-            return View(categoryvalues);
-
-
+            return View(categoryvalues); 
+        }
+        public PartialViewResult BlogDetailsCategoryList()
+        {
+            return PartialView();
         }
     }
 }

@@ -127,8 +127,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -335,6 +338,18 @@
     <Content Include="Views\Shared\Layout.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
     <Content Include="Views\Blog\BlogList.cshtml" />
+    <Content Include="Views\Blog\FeaturedPosts.cshtml" />
+    <Content Include="Views\Blog\OtherFeaturedPosts.cshtml" />
+    <Content Include="Views\Blog\MailSubscribe.cshtml" />
+    <Content Include="Views\About\Footer.cshtml" />
+    <Content Include="Views\Blog\BlogDetails.cshtml" />
+    <Content Include="Views\Blog\BlogCover.cshtml" />
+    <Content Include="Views\Blog\BlogReadAll.cshtml" />
+    <Content Include="Views\Comment\CommentList.cshtml" />
+    <Content Include="Views\Comment\LeaveComment.cshtml" />
+    <Content Include="Views\Author\AuthorAbout.cshtml" />
+    <Content Include="Views\Author\AuthorPopularPost.cshtml" />
+    <Content Include="Views\Category\BlogDetailsCategoryList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
