@@ -17,5 +17,9 @@ namespace MvcBlogProject.Controllers
         {
             return PartialView();
         }
+        public PartialViewResult MeetTheTeam()
+        {
+            return PartialView();
+        }
     }
 }
