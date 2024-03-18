@@ -53,6 +53,12 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -144,6 +150,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -176,6 +183,7 @@
     <Content Include="miniblog\fonts\icomoon\Read Me.txt" />
     <Content Include="miniblog\fonts\icomoon\style.css" />
     <Content Include="miniblog\images\cebupacific-booking.jpg" />
+    <Content Include="miniblog\images\einstain.jpg" />
     <Content Include="miniblog\images\hero_1.jpg" />
     <Content Include="miniblog\images\img_1.jpg" />
     <Content Include="miniblog\images\img_2.jpg" />
@@ -188,6 +196,8 @@
     <Content Include="miniblog\images\person_3.jpg" />
     <Content Include="miniblog\images\person_4.jpg" />
     <Content Include="miniblog\images\person_5.jpg" />
+    <Content Include="miniblog\images\UcuzRoman.jpg" />
+    <Content Include="miniblog\images\YapayZeka.jpg" />
     <Content Include="miniblog\index.html" />
     <Content Include="miniblog\js\aos.js" />
     <Content Include="miniblog\js\bootstrap-datepicker.min.js" />
@@ -310,6 +320,7 @@
     <Content Include="miniblog\scss\_site-base.scss" />
     <Content Include="miniblog\scss\_site-blocks.scss" />
     <Content Include="miniblog\scss\_site-navbar.scss" />
+    <Content Include="miniblog\images\Osmanlı.jpg" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

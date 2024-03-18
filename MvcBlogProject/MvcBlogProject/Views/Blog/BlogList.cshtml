@@ -1,11 +1,14 @@
-﻿@model IEnumerable<EntityLayer.Concrate.Blog>
-@{string color="";}
+﻿@using PagedList;
+@using PagedList.Mvc;
+
+@model IEnumerable<EntityLayer.Concrate.Blog>
+@{string color = "";}
 <div class="site-section">
 
     <div class="container">
         <div class="row mb-5">
             <div class="col-12">
-                <h2>Post Listesi</h2>
+                <h2><b>Post Listesi</b></h2>
             </div>
         </div>
         <div class="row">
@@ -13,37 +16,45 @@
 
             @foreach (var item in Model)
             {
-                if (item.Category.CategoryName=="Teknoloji")
-                {
-                    color = "post-category text-white bg-secondary mb-3";
-                }
-                if (item.Category.CategoryName == "Tarih")
+                if (item.Category.CategoryName == "Teknoloji")
                 {
                     color = "post-category text-white bg-primary mb-3";
                 }
-                if (item.Category.CategoryName == "Film & Dizi")
+                if (item.Category.CategoryName == "Tarih")
                 {
                     color = "post-category text-white bg-danger mb-3";
                 }
+                if (item.Category.CategoryName == "Film & Dizi")
+                {
+                    color = "post-category text-white bg-warning mb-3";
+                }
                 if (item.Category.CategoryName == "Yazılım")
                 {
-                    color = "post-category text-white bg-info mb-3";
+                    color = "post-category text-white bg-success mb-3";
+                }
+                if (item.Category.CategoryName == "Kültür&Sanat")
+                {
+                    color = "post-category text-white bg-dark mb-3";
+                }
+                if (item.Category.CategoryName == "Seyahat")
+                {
+                    color = "post-category text-white  bg-secondary";
                 }
 
-                <div class="col-lg-4 mb-4 "  >
+                <div class="col-lg-4 mb-4   ">
                     <div class="entry2">
-                        <a href="single.html"><img style="min-height:250px"  src ="@item.blogImage" alt="Image" class="img-fluid rounded"></a>
+                        <a href="single.html"><img style="min-height:250px; max-height:250px" src="@item.blogImage" alt="Image" class="img-fluid rounded"></a>
                         <div class="excerpt">
                             <span class="@color">@item.Category.CategoryName</span>
 
                             <h2><a href="single.html">@item.BlogTitle</a></h2>
                             <div class="post-meta align-items-center text-left clearfix">
                                 <figure class="author-figure mb-0 mr-3 float-left"><img src="@item.Author.AuthorImage" alt="Image" class="img-fluid"></figure>
-                                <span class="d-inline-block mt-1">By <a href="#">@item.Author.AuthorName</a></span>
+                                <span class="d-inline-block mt-1"><a href="#">@item.Author.AuthorName</a></span>
                                 <span>&nbsp;-&nbsp; @item.BlogDate.ToShortDateString()</span>
                             </div>
 
-                            <p>@item.BlogContent.Substring(0,item.BlogContent.Substring(0,200).LastIndexOf(" "))  </p>
+                            <p>@item.BlogContent.Substring(0, item.BlogContent.Substring(0, 200).LastIndexOf(" "))  </p>
                             <p><a href="#">Devamını Oku</a></p>
                         </div>
 
@@ -57,3 +68,5 @@
         </div>
     </div>
 </div>
+
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new {page}))

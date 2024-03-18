@@ -96,3 +96,7 @@ D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\MvcBlogProject\obj\Debug\MvcB
 D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\MvcBlogProject\obj\Debug\MvcBlogProject.csproj.CopyComplete
 D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\MvcBlogProject\obj\Debug\MvcBlogProject.dll
 D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\MvcBlogProject\obj\Debug\MvcBlogProject.pdb
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\MvcBlogProject\bin\PagedList.dll
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\MvcBlogProject\bin\PagedList.xml
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\MvcBlogProject\bin\PagedList.Mvc.dll
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\MvcBlogProject\bin\PagedList.Mvc.xml
