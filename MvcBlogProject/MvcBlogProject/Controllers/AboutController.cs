@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +16,9 @@ namespace MvcBlogProject.Controllers
         }
         public PartialViewResult Footer()
         {
-            return PartialView();
+            AboutManager abm = new AboutManager();
+           var aboutcontentlist= abm.GetAll();
+            return PartialView(aboutcontentlist);
         }
         public PartialViewResult MeetTheTeam()
         {

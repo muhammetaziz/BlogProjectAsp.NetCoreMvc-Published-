@@ -13,3 +13,6 @@ D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\DataAccessLayer\obj\Debug\Dat
 D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig1.resources
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+D:\PROJELER\Asp.Net-MVC-BlogProject\MvcBlogProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig2.resources

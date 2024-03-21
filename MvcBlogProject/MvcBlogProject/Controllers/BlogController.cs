@@ -14,15 +14,13 @@ namespace MvcBlogProject.Controllers
 
         // GET: Blog
         BlogManager bm = new BlogManager();
-
-
         public ActionResult Index()
         {
             return View();
         }
-        public PartialViewResult BlogList(int page=1)
+        public PartialViewResult BlogList(int page = 1)
         {
-            var bloglist = bm.GetAll().ToPagedList(page,6);
+            var bloglist = bm.GetAll().ToPagedList(page, 6);
             return PartialView(bloglist);
         }
         public PartialViewResult FeaturedPosts()
@@ -72,7 +70,7 @@ namespace MvcBlogProject.Controllers
             ViewBag.postImage4 = postImage4;
             ViewBag.postDate4 = postDate4;
             #endregion
-            
+
             //5.Post
             #region
             var postTitle5 = bm.GetAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 5).Select(y => y.BlogTitle).FirstOrDefault();
@@ -90,21 +88,21 @@ namespace MvcBlogProject.Controllers
         {
             return PartialView();
         }
-        public PartialViewResult MailSubscribe()
-        {
-            return PartialView();
-        }
         public ActionResult BlogDetails()
         {
+
             return View();
         }
-        public PartialViewResult BlogCover()
+        public PartialViewResult BlogCover(int id)
         {
-            return PartialView();
+            var BlogDetailsList = bm.GetBlogByID(id);
+            return PartialView(BlogDetailsList);
+
         }
-        public PartialViewResult BlogReadAll()
+        public PartialViewResult BlogReadAll(int id)
         {
-            return PartialView();
+            var BlogDetailsList = bm.GetBlogByID(id);
+            return PartialView(BlogDetailsList);
         }
         public ActionResult BlogByCategory()
         {

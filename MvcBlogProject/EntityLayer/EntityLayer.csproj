@@ -58,6 +58,7 @@
     <Compile Include="Concrate\Category.cs" />
     <Compile Include="Concrate\Comment.cs" />
     <Compile Include="Concrate\Contact.cs" />
+    <Compile Include="Concrate\SubscribeMail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

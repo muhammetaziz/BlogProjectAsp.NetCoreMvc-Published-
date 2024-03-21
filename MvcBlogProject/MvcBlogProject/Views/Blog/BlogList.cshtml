@@ -4,7 +4,6 @@
 @model IEnumerable<EntityLayer.Concrate.Blog>
 @{string color = "";}
 <div class="site-section">
-
     <div class="container">
         <div class="row mb-5">
             <div class="col-12">
@@ -47,7 +46,7 @@
                         <div class="excerpt">
                             <span class="@color">@item.Category.CategoryName</span>
 
-                            <h2><a href="single.html">@item.BlogTitle</a></h2>
+                            <h2><a href="/Blog/BlogDetails/@item.BlogID">@item.BlogTitle</a></h2>
                             <div class="post-meta align-items-center text-left clearfix">
                                 <figure class="author-figure mb-0 mr-3 float-left"><img src="@item.Author.AuthorImage" alt="Image" class="img-fluid"></figure>
                                 <span class="d-inline-block mt-1"><a href="#">@item.Author.AuthorName</a></span>
@@ -62,11 +61,8 @@
 
                 </div>
             }
-
-
-
         </div>
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
     </div>
 </div>
 
-@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new {page}))
