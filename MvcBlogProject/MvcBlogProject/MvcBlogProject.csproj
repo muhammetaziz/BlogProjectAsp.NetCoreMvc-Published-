@@ -183,6 +183,7 @@
     <Content Include="miniblog\fonts\icomoon\fonts\icomoon.svg" />
     <Content Include="miniblog\fonts\icomoon\Read Me.txt" />
     <Content Include="miniblog\fonts\icomoon\style.css" />
+    <Content Include="miniblog\images\blog.jpg" />
     <Content Include="miniblog\images\cebupacific-booking.jpg" />
     <Content Include="miniblog\images\einstain.jpg" />
     <Content Include="miniblog\images\hero_1.jpg" />

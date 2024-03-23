@@ -1,10 +1,11 @@
-﻿<div class="sidebar-box">
+﻿@model IEnumerable<EntityLayer.Concrate.Category>
+<div class="sidebar-box">
+
     <h3 class="heading">Kategoriler</h3>
-    <ul class="categories">
-        <li><a href="#">Yemek <span>(12)</span></a></li>
-        <li><a href="#">Seyehat <span>(22)</span></a></li>
-        <li><a href="#">Yaşam <span>(37)</span></a></li>
-        <li><a href="#">İş <span>(42)</span></a></li>
-        <li><a href="#">Macera <span>(14)</span></a></li>
-    </ul>
+    @foreach (var item in Model)
+    {
+<ul class="categories">
+    <li class="border-bottom" style="height:40px"><a href="/Blog/BlogByCategory/@item.CategoryID">@item.CategoryName  </a></li>
+</ul>
+    }
 </div>

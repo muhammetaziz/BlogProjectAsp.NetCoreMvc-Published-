@@ -9,20 +9,24 @@ namespace MvcBlogProject.Controllers
 {
     public class AboutController : Controller
     {
+        AboutManager abm = new AboutManager();
         // GET: About
         public ActionResult Index()
         {
-            return View();
+            var abautcontent = abm.GetAll();
+            return View(abautcontent);
         }
         public PartialViewResult Footer()
         {
-            AboutManager abm = new AboutManager();
-           var aboutcontentlist= abm.GetAll();
+
+            var aboutcontentlist = abm.GetAll();
             return PartialView(aboutcontentlist);
         }
         public PartialViewResult MeetTheTeam()
         {
-            return PartialView();
+            AuthorManager authman = new AuthorManager();
+            var authorlist = authman.GetAll();
+            return PartialView(authorlist);
         }
     }
 }

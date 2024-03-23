@@ -42,7 +42,7 @@
 
                 <div class="col-lg-4 mb-4   ">
                     <div class="entry2">
-                        <a href="single.html"><img style="min-height:250px; max-height:250px" src="@item.blogImage" alt="Image" class="img-fluid rounded"></a>
+                        <a href="/Blog/BlogDetails/@item.BlogID"><img style="min-height:250px; max-height:250px" src="@item.blogImage" alt="Image" class="img-fluid rounded"></a>
                         <div class="excerpt">
                             <span class="@color">@item.Category.CategoryName</span>
 
@@ -54,11 +54,9 @@
                             </div>
 
                             <p>@item.BlogContent.Substring(0, item.BlogContent.Substring(0, 200).LastIndexOf(" "))  </p>
-                            <p><a href="#">Devamını Oku</a></p>
-                        </div>
-
-                    </div>
-
+                            <p><a href="/Blog/BlogDetails/@item.BlogID">Devamını Oku</a></p>
+                        </div> 
+                    </div> 
                 </div>
             }
         </div>
