@@ -27,5 +27,13 @@ namespace BusinessLayer.Concrete
         {
             return repoblog.List(x => x.CategoryID == id);
         }
+        public int BlogAddBL(Blog p)
+        {
+            if (p.blogImage==""||p.BlogContent==""||p.BlogTitle==""||p.BlogContent.Length<=200)
+            {
+                return -1;
+            }
+            return repoblog.Insert(p);
+        }
     }
 }

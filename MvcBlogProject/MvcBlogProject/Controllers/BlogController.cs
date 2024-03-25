@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using EntityLayer.Concrate;
+using DataAccessLayer.Concrate;
 
 namespace MvcBlogProject.Controllers
 {
@@ -115,5 +117,37 @@ namespace MvcBlogProject.Controllers
             return View(BlogListByCategory);
         }
 
+        public ActionResult AdminBlogList()
+        {
+            var bloglist = bm.GetAll();
+            return View(bloglist);
+        }
+        public ActionResult AddNewBlog()
+        {
+            Context c = new Context();
+            List<SelectListItem> values = (from x in c.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryID.ToString()
+                                           }).ToList();
+            ViewBag.values = values;
+            Context a = new Context();
+            List<SelectListItem> valuesa = (from x in c.Authors.ToList()
+                                            select new SelectListItem
+                                            {
+                                                Text = x.AuthorName,
+                                                Value = x.AuthorID.ToString()
+                                            }).ToList();
+            ViewBag.valuesa = valuesa;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddNewBlog(Blog b)
+        {
+            bm.BlogAddBL(b);
+            return RedirectToAction("AdminBlogList");
+        }
     }
 }

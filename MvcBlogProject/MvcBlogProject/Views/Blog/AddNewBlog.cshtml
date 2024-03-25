@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrate.Blog
+@{
+    ViewBag.Title = "AddNewBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    @Html.Label("Blog Başlığı")
+    @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.values, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Resim Yolu")
+    @Html.TextBoxFor(x => x.blogImage, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.BlogDate, new { @class = "form-control" , @Value = @DateTime.Now.ToShortDateString() })
+
+    <br />
+    @Html.Label("Yazar")
+     @Html.DropDownListFor(x => x.AuthorID, (List<SelectListItem>)ViewBag.valuesa, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("İçerik")
+    @Html.TextAreaFor(x => x.BlogContent, 10, 30, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success"> Kaydet</button>
+
+</form>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<EntityLayer.Concrate.Blog>
+@{
+    ViewBag.Title = "AdminBlogList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Blog Listesi</h2>
+<br /> 
+ <table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>Kategori</th>
+        <th>Yazar</th>
+        <th>Tarih</th>
+        <th style="width:30px" >Sil</th>
+        <th style="width:30px">Güncelle</th>
+        <th style="width:30px">Detaylar</th>
+        <th style="width:30px">Yorumlar</th>
+    </tr>
+    @foreach (var item in Model)
+    {   
+        <tr> 
+            <td>@item.BlogID</td>
+            <td>@item.BlogTitle</td>
+            <td>@item.Category.CategoryName</td>
+            <td>@item.Author.AuthorName</td> 
+            <td>@item.BlogDate.ToShortDateString()</td>
+            <td><a class="btn btn-danger " style="color:black" href="#">Sil</a></td>
+            <td><a class="btn btn-success" style="color:black" href="#">Güncelle</a></td>
+            <td><a class="btn btn-primary" style="color:black" href="#">Detaylar</a></td>
+            <td><a class="btn btn-secondary" style="color:black" href="#">Yorumlar</a></td>
+
+        </tr>
+    }
+</table>
+<a href="/Blog/AddNewBlog" class="btn btn-primary">Yeni Blog Ekle</a>
