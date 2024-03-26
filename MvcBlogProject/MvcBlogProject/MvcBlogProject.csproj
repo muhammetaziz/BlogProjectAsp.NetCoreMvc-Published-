@@ -1993,6 +1993,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="miniblog\about.html" />
+    <Content Include="miniblog\images\CSharp.jpg" />
     <Content Include="miniblog\images\Ahtapot.jpg" />
     <Content Include="miniblog\images\BreakingBad.jpg" />
     <Content Include="miniblog\category.html" />
@@ -2037,6 +2038,7 @@
     <Content Include="miniblog\images\person_4.jpg" />
     <Content Include="miniblog\images\person_5.jpg" />
     <Content Include="miniblog\images\UcuzRoman.jpg" />
+    <Content Include="miniblog\images\user2-160x160.jpg" />
     <Content Include="miniblog\images\YapayZeka.jpg" />
     <Content Include="miniblog\index.html" />
     <Content Include="miniblog\js\aos.js" />
@@ -2466,6 +2468,11 @@
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Blog\AdminBlogList.cshtml" />
     <Content Include="Views\Blog\AddNewBlog.cshtml" />
+    <Content Include="Views\Blog\UpdateBlog.cshtml" />
+    <Content Include="Views\Blog\GetCommentByBlog.cshtml" />
+    <Content Include="Views\Author\AuthorList.cshtml" />
+    <Content Include="Views\Author\AddAuthor.cshtml" />
+    <Content Include="Views\Category\AdminCategoryList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

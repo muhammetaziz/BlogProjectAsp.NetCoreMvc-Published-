@@ -1,0 +1,38 @@
+﻿@model EntityLayer.Concrate.Author
+@{
+    ViewBag.Title = "AddAuthor";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<form class="form-group" method="post">
+    @Html.Label("Yazar Adı")
+    @Html.TextBoxFor(x => x.AuthorName, new { @class = "form-control" })
+     
+    <br />
+    @Html.Label("Title ")
+    @Html.TextBoxFor(x => x.AuthorTitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Profil Resmi ")
+    @Html.TextBoxFor(x => x.AuthorImage, new { @class = "form-control" })
+    <br />
+    @Html.Label("Telefon ")
+    @Html.TextBoxFor(x => x.AuthorPhone, new { @class = "form-control" })
+    <br />
+    @Html.Label("Mail ")
+    @Html.TextBoxFor(x => x.AuthorMail, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifre ")
+    @Html.TextBoxFor(x => x.AuthorPassword, new { @class = "form-control",@Type="password" })
+    <br />
+    @Html.Label("Yazar Kısa Hakkımda Kısmı")
+    @Html.TextBoxFor(x => x.AuthorShotAbout, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Yazar Hakkımda Kısmı")
+    @Html.TextAreaFor(x => x.AuthorAbout, 5, 30, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success"> Kaydet</button>
+
+</form>
+
+
+

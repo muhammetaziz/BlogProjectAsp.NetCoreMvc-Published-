@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EntityLayer.Concrate.Category>
+@{
+    ViewBag.Title = "AdminCategoryList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AdminCategoryList</h2>
+<br />
+
+<table class="table table-bordered table-striped table-hover">
+    <tr>
+        <td>ID</td>
+        <td>Kategori Adı</td>
+        <td>Kategori Açıklaması</td>
+        <td>Düzenle</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+            <td>@item.CategoryDescription</td>
+            <td><a class="btn btn-primary" href="/Category/UpdateCategory/@item.CategoryID">Düzenle</a></td>
+        </tr>
+    }
+</table>
+
+

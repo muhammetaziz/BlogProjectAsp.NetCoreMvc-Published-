@@ -21,6 +21,21 @@ namespace EntityLayer.Concrate
         [StringLength(250)]
         public string AuthorAbout { get; set; }
 
+        [StringLength(15)]
+        public string AuthorPhone { get; set; }
+
+        [StringLength(50)]
+        public string AuthorTitle { get; set; }
+        [StringLength(150)]
+        public string AuthorShotAbout { get; set; }
+
+        [StringLength(25)]
+        public string AuthorPassword { get; set; }
+
+        [StringLength(50)]
+        public string AuthorMail { get; set; }
+
+
 
         public ICollection<Blog> Blogs { get; set; }
 

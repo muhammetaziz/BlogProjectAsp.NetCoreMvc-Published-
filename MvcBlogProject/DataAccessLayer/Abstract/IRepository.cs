@@ -15,6 +15,8 @@ namespace DataAccessLayer.Abstract
         int Delete(T p);
         T GetByID(int id);
         List<T> List(Expression<Func<T, bool>> filter);
+
+        T Find(Expression<Func<T, bool>> where);
       
 
     }
