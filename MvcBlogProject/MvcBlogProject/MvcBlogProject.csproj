@@ -2473,6 +2473,11 @@
     <Content Include="Views\Author\AuthorList.cshtml" />
     <Content Include="Views\Author\AddAuthor.cshtml" />
     <Content Include="Views\Category\AdminCategoryList.cshtml" />
+    <Content Include="Views\Author\AuthorEdit.cshtml" />
+    <Content Include="Views\Comment\AdminCommentLitst.cshtml" />
+    <Content Include="Views\Category\AdminCategoryAdd.cshtml" />
+    <Content Include="Views\Blog\AdminBlogList2.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

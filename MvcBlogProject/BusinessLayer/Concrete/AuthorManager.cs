@@ -26,5 +26,26 @@ namespace BusinessLayer.Concrete
             }
             return repoauth.Insert(p);
         }
+
+        //Yazarı ID degerine gore edit sayfasına tasımak 
+        public Author FindAuthor(int id)
+        {
+            return repoauth.Find(x => x.AuthorID == id);
+        }
+        
+        public int EditAuthor(Author p)
+        {
+            Author author = repoauth.Find(x => x.AuthorID == p.AuthorID);
+            author.AuthorName = p.AuthorName;
+            author.AuthorImage = p.AuthorImage;
+            author.AuthorAbout  = p.AuthorAbout;
+            author.AuthorPhone = p.AuthorPhone;
+            author.AuthorTitle = p.AuthorTitle;
+            author.AuthorShotAbout = p.AuthorShotAbout;
+            author.AuthorPassword = p.AuthorPassword;
+            author.AuthorMail = p.AuthorMail;
+            return repoauth.Update(author);
+
+        }
     }
 }

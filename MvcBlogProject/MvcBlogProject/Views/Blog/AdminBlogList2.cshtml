@@ -1,44 +1,44 @@
-﻿@model IEnumerable<EntityLayer.Concrate.Category>
+﻿@model IEnumerable<EntityLayer.Concrate.Blog>
 @{
-    ViewBag.Title = "AdminCategoryList";
+    ViewBag.Title = "AdminBlogList2";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
- 
+
 <section class="content">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Kategoriler</h3>
+            <h3 class="card-title">Bloglar</h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                     <i class="fas fa-minus"></i>
                 </button>
-                
+
             </div>
         </div>
         <div class="card-body p-0">
-            <table class="table table-striped projects">
+            <table class="table table-striped projects table-hover">
                 <thead>
                     <tr>
                         <th style="width: 1%">
                             ID
                         </th>
                         <th style="width: 10%">
-                            Kategori Adı
+                            Blog Başlığı
                         </th>
                         <th>
-                            Kategori Açıklaması
+                            Blog İçeriği
                         </th>
                         <th width="8%">
-                            Son Blog
+                            Yazarı
                         </th>
                         <th style="width:10%">
-                            Kategori Bar
+                            Blog Bar
                         </th>
                         <th style="width: 8%" class="text-center">
-                            Kategori Durumu
+                            Kategori
                         </th>
-                        <th style="width: 20%" class="text-right">
-                            Aksiyon
+                        <th style="width: 20%">
+
                         </th>
                     </tr>
                 </thead>
@@ -48,24 +48,16 @@
 
 
                         <tr>
-                            <td> @item.CategoryID </td>
-                            <td> @item.CategoryName </td>
-                            <td>@item.CategoryDescription</td>
-                            <td>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src=" /AdminLTE-3.0.4/dist/img/avatar.png">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="/AdminLTE-3.0.4/dist/img/avatar2.png">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="/AdminLTE-3.0.4/dist/img/avatar3.png">
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="/AdminLTE-3.0.4/dist/img/avatar04.png">
-                                    </li>
-                                </ul>
+                            <td> @item.BlogID  </td>
+                            <td> @item.BlogTitle </td>
+                            <td>@item.BlogContent.Substring(0, item.BlogContent.Substring(0, 200).LastIndexOf(" ")) ...  </td>
+                            <td> 
+                                
+                                        <img alt="Avatar" class="table-avatar"  src="@item.Author.AuthorImage">
+                                        <br />
+                                        <small>
+                                            @item.Author.AuthorName
+                                        </small>
                             </td>
                             <td class="project_progress">
                                 <div class="progress progress-sm">
@@ -77,24 +69,30 @@
                                 </small>
                             </td>
                             <td class="project-state">
-                                <span class="badge badge-success">Success</span>
-                            </td> 
+                                <span class="badge badge-secondary">@item.Category.CategoryName</span>
+                            </td>
                             <td class="project-actions text-right">
-                                <a class="btn btn-primary btn-sm" href="/Blog/BlogByCategory/@item.CategoryID">
+                                <a class="btn btn-primary btn-sm" href="/Blog/BlogDetails/@item.BlogID">
                                     <i class="fas fa-folder">
                                     </i>
                                     Gorüntüle
                                 </a>
-                                <a class="btn btn-info btn-sm" href="#">
+                                <a class="btn btn-info btn-sm" href="/Blog/UpdateBlog/@item.BlogID">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Düzenle
                                 </a>
-                                <a hidden class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-warning btn-sm" href="/Blog/GetCommentByBlog/@item.BlogID">
+                                    <i class="fas fa-comment">
+                                    </i>
+                                    Yorumlar
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="/Blog//DeleteBlog/@item.BlogID">
                                     <i class="fas fa-trash">
                                     </i>
                                     Sil
                                 </a>
+
                             </td>
                         </tr>
                     }
@@ -106,4 +104,5 @@
     <!-- /.card -->
 
 </section>
-<a class="btn btn-success" href="/Category/AdminCategoryAdd">Yeni Kategori Ekle</a>
+<a href="/Blog/AddNewBlog" class="btn btn-success fa fa-plus">Yeni Blog Ekle</a>
+

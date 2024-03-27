@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using EntityLayer.Concrate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,17 @@ namespace MvcBlogProject.Controllers
         {
             var categoryvalues = cm.GetAll();
             return View(categoryvalues);
+        }
+        [HttpGet]
+        public ActionResult AdminCategoryAdd()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AdminCategoryAdd(Category p)
+        {
+            cm.AddCategory(p);
+            return RedirectToAction("AdminCategoryList");
         }
     }
 }

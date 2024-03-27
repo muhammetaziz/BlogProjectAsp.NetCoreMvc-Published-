@@ -30,5 +30,10 @@ namespace MvcBlogProject.Controllers
             cm.CommentAdd(c);
             return PartialView();
         }
+        public ActionResult AdminCommentLitst()
+        {
+            var admincommentlist = cm.CommentList();
+            return View(admincommentlist);
+        }
     }
 }

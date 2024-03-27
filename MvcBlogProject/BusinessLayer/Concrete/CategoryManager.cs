@@ -16,6 +16,15 @@ namespace BusinessLayer.Concrete
         {
             return repocategory.List();
         }
+        public int AddCategory(Category p)
+        {
+            //parametreye gore geçerlilik sağlama
+            if (p.CategoryName == "" || p.CategoryDescription == ""  )
+            {
+                return -1;
+            }
+            return repocategory.Insert(p);
+        }
 
 
     }
