@@ -143,6 +143,7 @@
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MailSubscribeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2486,6 +2487,11 @@
     <Content Include="Views\Chart\Index.cshtml" />
     <Content Include="Views\Shared\_AuthorLayout.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Login\AuthorLogin.cshtml" />
+    <Content Include="Views\User\Partial1.cshtml" />
+    <Content Include="Views\User\BlogList.cshtml" />
+    <Content Include="Views\User\UpdateBlog.cshtml" />
+    <Content Include="Views\User\GetCommentByBlog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

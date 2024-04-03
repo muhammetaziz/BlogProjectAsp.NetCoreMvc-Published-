@@ -19,7 +19,7 @@ namespace EntityLayer.Concrate
         public string blogImage { get; set; }
         public DateTime BlogDate { get; set; }
         public string BlogContent { get; set; }
-
+         
         public int BlogRating { get; set; }
 
 

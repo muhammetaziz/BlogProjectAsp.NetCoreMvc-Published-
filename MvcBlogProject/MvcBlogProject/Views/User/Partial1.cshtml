@@ -1,0 +1,126 @@
+﻿@model IEnumerable<EntityLayer.Concrate.Author>
+
+<div class="tab-pane" id="settings">
+    @foreach (var item in Model)
+    {
+
+
+    <form class="form-horizontal">
+
+        <div class="form-group row" hidden>
+
+            <label for="inputName" class="col-sm-2 col-form-label">Adı Soyad</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" id="inputName" value="@item.AuthorID">
+
+            </div>
+
+        </div>
+        <div class="form-group row">
+
+            <label for="inputName" class="col-sm-2 col-form-label">Adı Soyad</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" id="inputName" value="@item.AuthorName">
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <label for="inputEmail" class="col-sm-2 col-form-label">E-Mail</label>
+
+            <div class="col-sm-10">
+
+                <input type="email" class="form-control" id="inputEmail" value="@item.AuthorMail">
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <label for="inputName2" class="col-sm-2 col-form-label">Title</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" id="inputName2" value="@item.AuthorTitle">
+
+            </div>
+
+        </div>
+        <div class="form-group row">
+
+            <label for="inputName2" class="col-sm-2 col-form-label">Telefon</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" id="inputName2" value="@item.AuthorPhone">
+
+            </div>
+
+        </div>
+        <div class="form-group row">
+
+            <label for="inputName2" class="col-sm-2 col-form-label">Şifre</label>
+
+            <div class="col-sm-10">
+
+                <input type="password" class="form-control" id="inputName2"  >
+
+            </div>
+
+        </div>
+        <div class="form-group row">
+
+            <label for="inputName2" class="col-sm-2 col-form-label">Şifre(Tekrar)</label>
+
+            <div class="col-sm-10">
+
+                <input type="password" class="form-control" id="inputName2"  >
+
+            </div>
+
+        </div>
+
+        <div class="form-group row">
+
+            <label for="inputName2" class="col-sm-2 col-form-label">Hakkımda Kısmı(Kısa)</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" id="inputName2" value="@item.AuthorShotAbout">
+
+            </div>
+
+        </div>
+        <div class="form-group row">
+
+            <label for="inputName2" class="col-sm-2 col-form-label">Hakkımda Kısmı</label>
+
+            <div class="col-sm-10">
+
+                <input type="text" class="form-control" id="inputName2" value="@item.AuthorAbout">
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group row">
+
+            <div class="offset-sm-2 col-sm-10">
+
+                <button type="submit" class="btn btn-danger">Submit</button>
+
+            </div>
+
+        </div>
+
+    </form>
+    }
+</div>
