@@ -142,6 +142,7 @@
     <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MailSubscribeController.cs" />
@@ -2492,6 +2493,8 @@
     <Content Include="Views\User\BlogList.cshtml" />
     <Content Include="Views\User\UpdateBlog.cshtml" />
     <Content Include="Views\User\GetCommentByBlog.cshtml" />
+    <Content Include="Views\User\AddNewBlog.cshtml" />
+    <Content Include="Views\Error\Page404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

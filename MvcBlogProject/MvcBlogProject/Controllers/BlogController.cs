@@ -158,7 +158,7 @@ namespace MvcBlogProject.Controllers
         public ActionResult DeleteBlog(int id)
         {
             bm.DeleteBlog(id);
-            return RedirectToAction("AdminBlogList");
+            return RedirectToAction("BlogList");
         }
         [HttpGet]
         public ActionResult UpdateBlog(int id)

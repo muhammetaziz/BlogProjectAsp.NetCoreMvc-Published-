@@ -1,13 +1,11 @@
 ﻿@model EntityLayer.Concrate.Blog
+
 @{
-    ViewBag.Title = "UpdateBlog";
+    ViewBag.Title = "AddNewBlog";
     Layout = "~/Views/Shared/_AuthorLayout.cshtml";
 }
+
 <form class="form-group" method="post">
-    <br />
-    @*@Html.Label("Blog ID")*@
-    @Html.TextBoxFor(x => x.BlogID, new { @class = "form-control", @Hidden = true })
-    <br />
     @Html.Label("Blog Başlığı")
     @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
     <br />
@@ -20,17 +18,16 @@
 
     <br />
     @Html.Label("Tarih")
-    @Html.TextBoxFor(x => x.BlogDate, new { @class = "form-control" })
+    @Html.TextBoxFor(x => x.BlogDate, new { @class = "form-control", @Value = @DateTime.Now.ToShortDateString(), @Type = "date" })
 
-    
-    @*//@Html.Label("Yazar")*@
-    @Html.DropDownListFor(x => x.AuthorID, (List<SelectListItem>)ViewBag.valuesa, new { @class = "form-control",@Hidden=true })
+    <br />
+    @Html.Label("Yazar")
+    @Html.DropDownListFor(x => x.AuthorID, (List<SelectListItem>)ViewBag.valuesa, new { @class = "form-control"})
 
     <br />
     @Html.Label("İçerik")
     @Html.TextAreaFor(x => x.BlogContent, 10, 30, new { @class = "form-control" })
     <br />
-    <button class="btn btn-success"> Güncelle </button>
+    <button class="btn btn-success"> Kaydet</button>
 
 </form>
-

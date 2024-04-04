@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error: Page Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .error-code {
+            font-size: 5rem;
+            color: #dc3545;
+            margin-bottom: 10px;
+        }
+
+        .error-message {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .suggestions {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <div class="error-message">Oops! Sayfa Bulunamadı</div>
+        <div class="suggestions">
+            <p>Üzgünüz ama aradığınız sayfa bulunamadı. Kaldırılmış, adı değiştirilmiş veya geçici olarak kullanılamıyor olabilir.</p>
+            <p>Geri Dön <a href="/Blog/Index/">Ana Sayfa</a></p>
+            <p>Bir hata oldugunu düşünüyorsan lütfen bizimle <a href="/Contact/Index">iletişime geç</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

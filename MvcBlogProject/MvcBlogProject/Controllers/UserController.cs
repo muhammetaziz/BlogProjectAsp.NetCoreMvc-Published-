@@ -6,11 +6,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace MvcBlogProject.Controllers
 {
+    [Authorize]
     public class UserController : Controller
-    {   
+    {  
         // GET: User
 
         BlogManager bm = new BlogManager(); 
@@ -25,6 +27,11 @@ namespace MvcBlogProject.Controllers
             p = (string)Session["AuthorMail"];
             var profilevalues = userProfile.GetAuthorByMail(p);
             return PartialView(profilevalues);
+        }
+        public ActionResult UpdateUserProfile(Author p)
+        {
+            userProfile.EditAuthor(p);
+            return RedirectToAction("Index");
         }
         public ActionResult BlogList(string p)
         {
@@ -69,6 +76,39 @@ namespace MvcBlogProject.Controllers
             CommentManager cm = new CommentManager();
             var commentlist = cm.CommentByBlog(id);
             return View(commentlist);
+        }
+        public ActionResult AddNewBlog()
+        {
+            Context c = new Context();
+            List<SelectListItem> values = (from x in c.Categories.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.CategoryID.ToString()
+                                           }).ToList();
+            ViewBag.values = values;
+            Context a = new Context();
+            List<SelectListItem> valuesa = (from x in c.Authors.ToList()
+                                            select new SelectListItem
+                                            {
+                                                Text = x.AuthorName,
+                                                Value = x.AuthorID.ToString()
+                                            }).ToList();
+            ViewBag.valuesa = valuesa;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddNewBlog(Blog b)
+        {
+            bm.BlogAddBL(b);
+            return RedirectToAction("BlogList");
+        }
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("AuthorLogin","Login");
         }
     }
 }

@@ -20,5 +20,19 @@ namespace BusinessLayer.Concrete
         {
             return repouserblog.List(x => x.AuthorID == id);
         }
+        public int EditAuthor(Author p)
+        {
+            Author author = repouser.Find(x => x.AuthorID == p.AuthorID);
+            author.AuthorName = p.AuthorName;
+            author.AuthorImage = p.AuthorImage;
+            author.AuthorAbout = p.AuthorAbout;
+            author.AuthorPhone = p.AuthorPhone;
+            author.AuthorTitle = p.AuthorTitle;
+            author.AuthorShotAbout = p.AuthorShotAbout;
+            author.AuthorPassword = p.AuthorPassword;
+            author.AuthorMail = p.AuthorMail;
+            return repouser.Update(author);
+
+        }
     }
 }
